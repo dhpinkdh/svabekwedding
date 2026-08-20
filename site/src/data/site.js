@@ -47,7 +47,7 @@ export const timeline = [
   {
     time: '5:00 PM',
     title: 'Ceremony',
-    body: 'The part we’ve been practicing. Thirty minutes, outdoors if the Pacific Northwest cooperates.',
+    body: 'The part we’ve been practicing. Thirty minutes in the castle gardens, weather permitting.',
   },
   {
     time: '5:30 PM',
@@ -57,7 +57,7 @@ export const timeline = [
   {
     time: '6:00 PM',
     title: 'Reception',
-    body: 'Dinner, toasts, and dancing in the great hall.',
+    body: 'Dinner and toasts outdoors, weather permitting, then dancing in the Great Hall.',
   },
   {
     time: '9:30 PM',
@@ -182,7 +182,7 @@ export const location = {
   facts: [
     { label: 'Getting there', body: 'About 45 minutes south of Seattle and 20 minutes south of Tacoma, just off I-5 in Lakewood.' },
     { label: 'Parking', body: 'Very limited on site. Please use the hotel shuttle if you can, or carpool with someone who is.' },
-    { label: 'Ceremony', body: 'Outdoors in the gardens, weather permitting, with the great hall ready as a backup.' },
+    { label: 'Ceremony & dinner', body: 'Both outdoors in the gardens, weather permitting, with the Great Hall ready as a backup — and dancing in there regardless.' },
     { label: 'Ground & shoes', body: 'Grass, gravel paths, and a few stone steps. Block heels beat stilettos here — ask anyone who has tried.' },
   ],
 };
@@ -299,7 +299,7 @@ export const faqs = [
   },
   {
     q: 'Are children invited?',
-    a: 'We adore your kids. This particular evening is an adults-only celebration, with the exception of our own small guest of honour. Let us know if you need a hand finding a sitter near the hotels.',
+    a: 'Yes — please bring them. We have a small one of our own, and we would much rather have your children there than not. If it helps, the shuttle back to the hotels leaves at 9:30 PM, which is a reasonable bedtime for everyone involved.',
   },
   {
     q: 'Can I bring a plus one?',
