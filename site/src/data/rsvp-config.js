@@ -13,4 +13,4 @@
    so never put an email address or phone number in here.
    ============================================================ */
 
-export const RSVP_ENDPOINT = '';
+export const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxdtikhtQbDjQi0hn1foWnLPGG3TTk-RrCG48_FpkOSW3grWELJUZvP9SJjlq2OZzNJnw/exec';
