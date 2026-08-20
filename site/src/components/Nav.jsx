@@ -2,13 +2,17 @@ import { useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { couple, wedding } from '../data/site';
 
+// Centre group
 const pages = [
   { to: '/', label: 'Home' },
   { to: '/our-story', label: 'Our Story' },
   { to: '/location', label: 'Location' },
   { to: '/travel', label: 'Accommodation & Travel' },
-  { to: '/registry', label: 'Registry' },
 ];
+
+// Right-hand group, and the full list the mobile drawer walks through
+const asides = [{ to: '/registry', label: 'Registry' }];
+const allPages = [...pages, ...asides, { to: '/rsvp', label: 'RSVP' }];
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -62,7 +66,6 @@ export default function Nav() {
           <span className="announce__dot announce__dot--wide" aria-hidden="true">·</span>
           <span className="announce__city">{wedding.cityState}</span>
         </p>
-        <Link to="/rsvp" className="announce__rsvp">RSVP</Link>
       </div>
 
       <header
@@ -79,6 +82,8 @@ export default function Nav() {
             <span /><span />
           </button>
 
+          <Link to="/" className="nav__mark" aria-label="Home">{couple.monogram}</Link>
+
           <nav className="nav__links" aria-label="Main">
             {pages.map((p) => (
               <NavLink key={p.to} to={p.to} end={p.to === '/'} className="nav__link">
@@ -87,13 +92,20 @@ export default function Nav() {
             ))}
           </nav>
 
-          <Link to="/" className="nav__mark" aria-label="Home">{couple.monogram}</Link>
+          <div className="nav__aside">
+            {asides.map((p) => (
+              <NavLink key={p.to} to={p.to} className="nav__link nav__link--aside">
+                {p.label}
+              </NavLink>
+            ))}
+            <Link to="/rsvp" className="nav__rsvp">RSVP</Link>
+          </div>
         </div>
       </header>
 
       <div className={`drawer ${open ? 'is-open' : ''}`} aria-hidden={!open}>
         <nav className="drawer__nav" aria-label="Mobile">
-          {[...pages, { to: '/rsvp', label: 'RSVP' }].map((p, i) => (
+          {allPages.map((p, i) => (
             <NavLink
               key={p.to}
               to={p.to}
