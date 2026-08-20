@@ -236,11 +236,16 @@ export const registry = {
   // Any entry with an empty link is hidden automatically, so you can
   // fill these in one at a time.
   links: [
-    { name: 'Our Registry on Joy', desc: 'The wish list, and the honeymoon fund.', url: 'https://withjoy.com/svabeks/registry' },
+    { name: 'Our Registry on Joy', desc: 'The full wish list.', url: 'https://withjoy.com/svabeks/registry' },
     // Add more here if you register anywhere else — empty ones stay hidden.
     { name: 'Amazon', desc: 'The practical list.', url: '' },
   ],
 };
+
+/* The deep link that opens the cash-fund contribution box directly.
+   To find it again: open your Joy registry, click the fund, and copy
+   the address bar — it's the registry link plus "?pid=..." on the end. */
+const JOY_FUND = 'https://withjoy.com/svabeks/registry?pid=cdbbbb7f-a0b7-41b7-886f-2b7db8791055';
 
 /* ---------- THE FUND ----------
    Shown as its own section, separate from the registry above.
@@ -257,17 +262,17 @@ export const funds = {
     {
       name: 'The honeymoon we never took',
       desc: 'We went straight from engaged to parents without stopping. We would like to stop.',
-      url: 'https://withjoy.com/svabeks/registry',
+      url: JOY_FUND,
     },
     {
       name: 'The house',
       desc: 'It came with a yard, a mortgage, and a list. We are slowly working down the list.',
-      url: 'https://withjoy.com/svabeks/registry',
+      url: JOY_FUND,
     },
     {
       name: 'Evelyn’s fund',
       desc: 'Something set aside for the small person who made all of this happen faster.',
-      url: 'https://withjoy.com/svabeks/registry',
+      url: JOY_FUND,
     },
   ],
   footnote:
