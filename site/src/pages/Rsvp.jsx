@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Reveal from '../components/Reveal';
 import Ornament from '../components/Ornament';
-import { RSVP_ENDPOINT, RSVP_EMAIL } from '../data/rsvp-config';
+import { RSVP_ENDPOINT } from '../data/rsvp-config';
 import { wedding, rsvpDeadline, couple } from '../data/site';
 
 const BLANK = {
@@ -135,15 +135,7 @@ export default function Rsvp() {
 
               <Field id="note" label={going ? 'Anything else we should know?' : 'Leave us a note'} textarea rows={4} value={f.note} onChange={set('note')} hint="Optional" />
 
-              {state === 'fallback' && (
-                <div className="notice">
-                  <p className="body body--tight">
-                    We couldn’t send that automatically. Please email your reply to{' '}
-                    <a className="link-u" href={mailto(f)}>{RSVP_EMAIL}</a> — clicking the address
-                    opens a message with your answers already filled in.
-                  </p>
-                </div>
-              )}
+              {state === 'fallback' && <Fallback answers={f} />}
 
               <div className="form__submit">
                 <button className="btn" type="submit" disabled={state === 'sending'}>
@@ -211,8 +203,8 @@ function ThankYou({ attending, name }) {
   );
 }
 
-function mailto(f) {
-  const body = [
+function summarise(f) {
+  return [
     `Name: ${f.firstName} ${f.lastName}`,
     `Email: ${f.email}`,
     f.phone && `Phone: ${f.phone}`,
@@ -224,5 +216,41 @@ function mailto(f) {
     f.song && `Song request: ${f.song}`,
     f.note && `Note: ${f.note}`,
   ].filter(Boolean).join('\n');
-  return `mailto:${RSVP_EMAIL}?subject=${encodeURIComponent(`RSVP — ${f.firstName} ${f.lastName}`)}&body=${encodeURIComponent(body)}`;
+}
+
+/* Shown only if the reply can't be sent automatically. Rather than
+   publishing an email address on a public page, we hand the guest
+   their own answers to pass on however they normally reach us. */
+function Fallback({ answers }) {
+  const [copied, setCopied] = useState(false);
+  const text = summarise(answers);
+
+  async function copy() {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      ta.remove();
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 4000);
+  }
+
+  return (
+    <div className="notice">
+      <p className="body body--tight">
+        Sorry — we couldn’t send that automatically. Nothing is lost: copy your
+        answers below and send them to Sara or Michael however you normally
+        would, and we’ll add you to the list ourselves.
+      </p>
+      <pre className="notice__pre">{text}</pre>
+      <button type="button" className="btn btn--ghost notice__btn" onClick={copy}>
+        {copied ? 'Copied ✓' : 'Copy my answers'}
+      </button>
+    </div>
+  );
 }

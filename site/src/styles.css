@@ -1023,3 +1023,14 @@ textarea.input { resize: vertical; line-height: 1.6; }
 }
 
 @media (max-width: 900px) { .funds { grid-template-columns: 1fr; } }
+
+/* RSVP fallback — guest copies their own answers, no address published */
+.notice__pre {
+  font-family: var(--sans); font-size: 0.82rem; line-height: 1.7;
+  color: var(--ink-2); background: var(--paper);
+  border: 1px solid var(--rule-soft);
+  padding: 1rem 1.1rem; margin: 1.1rem 0 0;
+  white-space: pre-wrap; word-break: break-word;
+  max-height: 220px; overflow-y: auto;
+}
+.notice__btn { margin-top: 1.1rem; }
