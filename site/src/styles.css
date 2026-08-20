@@ -1045,6 +1045,12 @@ textarea.input { resize: vertical; line-height: 1.6; }
 .fundband__orn { color: var(--brass); }
 
 .funds { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.4rem, 3vw, 2.4rem); }
+/* With only one or two funds, don't leave them stranded in a 3-wide grid */
+.funds--1 { grid-template-columns: minmax(0, 620px); justify-content: center; }
+.funds--2 { grid-template-columns: repeat(2, minmax(0, 460px)); justify-content: center; }
+.funds--1 .fund { text-align: center; align-items: center; padding: clamp(2.2rem, 5vw, 3.2rem); }
+.funds--1 .fund__d { padding-bottom: 1.6rem; }
+.funds--1 .fund__btn { align-self: center; }
 .fund {
   display: flex; flex-direction: column;
   border: 1px solid rgba(246, 244, 236, 0.18);

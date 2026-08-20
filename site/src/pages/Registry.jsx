@@ -53,7 +53,7 @@ export default function Registry() {
 
           {liveFunds.length > 0 ? (
             <>
-              <div className="funds">
+              <div className={`funds funds--${Math.min(liveFunds.length, 3)}`}>
                 {liveFunds.map((f, i) => (
                   <Reveal className="fund" key={f.name} delay={i * 120}>
                     <span className="fund__i" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>

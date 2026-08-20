@@ -236,7 +236,8 @@ export const registry = {
   // Any entry with an empty link is hidden automatically, so you can
   // fill these in one at a time.
   links: [
-    { name: 'Our Registry on Joy', desc: 'Everything in one place.', url: '' },
+    { name: 'Our Registry on Joy', desc: 'The wish list, and the honeymoon fund.', url: 'https://withjoy.com/svabeks/registry' },
+    // Add more here if you register anywhere else — empty ones stay hidden.
     { name: 'Amazon', desc: 'The practical list.', url: '' },
   ],
 };
@@ -256,8 +257,10 @@ export const funds = {
     {
       name: 'The honeymoon we never took',
       desc: 'We went straight from engaged to parents without stopping. We would like to stop.',
-      url: '',
+      url: 'https://withjoy.com/svabeks/registry',
     },
+    // To switch these on: add a Cash Fund for each in your Joy registry,
+    // then paste the registry link here — same link is fine.
     {
       name: 'The house',
       desc: 'It came with a yard, a mortgage, and a list. We are slowly working down the list.',
