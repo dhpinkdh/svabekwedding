@@ -6,7 +6,7 @@ import { wedding, rsvpDeadline, couple } from '../data/site';
 
 const BLANK = {
   firstName: '', lastName: '', email: '', phone: '',
-  attending: '', guests: '', guestNames: '',
+  attending: '', guests: '', children: '', guestNames: '',
   dietary: '', shuttle: '', song: '', note: '',
 };
 
@@ -114,9 +114,11 @@ export default function Rsvp() {
               {going && (
                 <div className="form__reveal">
                   <div className="form__pair">
-                    <Field id="guests" label="Total in your party" type="number" min="1" max="10" value={f.guests} onChange={set('guests')} hint="Including yourself" />
-                    <Field id="guestNames" label="Names of your guests" value={f.guestNames} onChange={set('guestNames')} hint="If your invitation includes them" />
+                    <Field id="guests" label="Total in your party" type="number" min="1" max="12" value={f.guests} onChange={set('guests')} hint="Including yourself and any children" />
+                    <Field id="children" label="How many are children?" type="number" min="0" max="8" value={f.children} onChange={set('children')} hint="Little ones are very welcome — 0 if none" />
                   </div>
+
+                  <Field id="guestNames" label="Names of everyone in your party" value={f.guestNames} onChange={set('guestNames')} hint="So we can get the place cards right" />
 
                   <Field id="dietary" label="Dietary requirements or allergies" textarea rows={3} value={f.dietary} onChange={set('dietary')} hint="Vegetarian, vegan, gluten-free, allergies — anything at all" />
 
@@ -210,6 +212,7 @@ function summarise(f) {
     f.phone && `Phone: ${f.phone}`,
     `Attending: ${f.attending === 'yes' ? 'Yes' : 'No'}`,
     f.guests && `Party size: ${f.guests}`,
+    f.children && `Children: ${f.children}`,
     f.guestNames && `Guests: ${f.guestNames}`,
     f.dietary && `Dietary: ${f.dietary}`,
     f.shuttle && `Shuttle: ${f.shuttle}`,

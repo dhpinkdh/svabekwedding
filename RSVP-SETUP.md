@@ -82,6 +82,26 @@ You'll get a note every time someone RSVPs.
 
 ---
 
+## Updating the script later
+
+If I ever add a new question to the form, you'll need to give the script the
+matching column — otherwise that answer arrives and is quietly thrown away.
+
+1. Open your spreadsheet → **Extensions → Apps Script**
+2. Select everything in the editor, delete it, and paste in the current
+   **`rsvp-google-script.js`** from your project folder
+3. Save (💾)
+4. **Deploy → Manage deployments → pencil icon → Version: New version → Deploy**
+
+Step 4 is the one people miss. Saving alone changes nothing for guests — only a
+*new version* goes live.
+
+The current script adds any missing columns to your sheet by itself, including
+to a sheet that already has replies in it. So this should be the last time you
+need to do this.
+
+---
+
 ## If something goes wrong
 
 **Replies aren't appearing.** Nine times out of ten, "Who has access" got left
