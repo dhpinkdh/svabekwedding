@@ -1,7 +1,7 @@
 import Reveal from './Reveal';
 import Ornament from './Ornament';
 
-export default function PageHead({ eyebrow, title, lede, image, imageAlt = '' }) {
+export default function PageHead({ eyebrow, title, lede, image, imageAlt = '', media = null }) {
   return (
     <header className="phead">
       <div className="wrap center">
@@ -10,6 +10,7 @@ export default function PageHead({ eyebrow, title, lede, image, imageAlt = '' })
         {lede && <Reveal as="p" className="body phead__lede" delay={200}>{lede}</Reveal>}
         <Reveal delay={280}><Ornament className="phead__orn" /></Reveal>
       </div>
+      {media}
       {image && (
         <Reveal className="phead__media frame frame--wide" variant="img" delay={120}>
           <img src={image} alt={imageAlt} />

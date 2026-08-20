@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PageHead from '../components/PageHead';
+import CastleReveal from '../components/CastleReveal';
 import Reveal from '../components/Reveal';
 import Parallax from '../components/Parallax';
 import Ornament from '../components/Ornament';
@@ -12,8 +13,7 @@ export default function Location() {
         eyebrow="Where we’ll be"
         title={<>Thornewood<br />Castle</>}
         lede={location.intro}
-        image="/photos/p149.jpg"
-        imageAlt="Sara and Michael beside a lake in Washington"
+        media={<CastleReveal />}
       />
 
       {/* Address card */}

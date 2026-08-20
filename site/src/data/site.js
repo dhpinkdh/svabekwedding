@@ -259,21 +259,19 @@ export const funds = {
       desc: 'We went straight from engaged to parents without stopping. We would like to stop.',
       url: 'https://withjoy.com/svabeks/registry',
     },
-    // To switch these on: add a Cash Fund for each in your Joy registry,
-    // then paste the registry link here — same link is fine.
     {
       name: 'The house',
       desc: 'It came with a yard, a mortgage, and a list. We are slowly working down the list.',
-      url: '',
+      url: 'https://withjoy.com/svabeks/registry',
     },
     {
       name: 'Evelyn’s fund',
       desc: 'Something set aside for the small person who made all of this happen faster.',
-      url: '',
+      url: 'https://withjoy.com/svabeks/registry',
     },
   ],
   footnote:
-    'Giving through Venmo, PayPal or Cash App costs you nothing extra. Card payments add a small processing fee.',
+    'All three lead to the same place, so pick whichever you like the sound of — we’ll know what you meant. Giving through Venmo, PayPal or Cash App costs you nothing extra; card payments add a small processing fee.',
 };
 
 /* ---------- FAQ ---------- */
