@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import { couple, wedding } from '../data/site';
 
@@ -14,11 +14,29 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const [solid, setSolid] = useState(false);
   const { pathname } = useLocation();
+  const navRef = useRef(null);
 
   useEffect(() => { setOpen(false); }, [pathname]);
 
   // Pages whose hero is a dark photo need light nav colours until it turns solid
   const overDark = pathname === '/' || pathname === '/our-story';
+
+  /* Publish the nav's real height so the hero can tuck underneath it exactly.
+     Measured rather than hardcoded — fonts and wrapping change it. */
+  useEffect(() => {
+    const el = navRef.current;
+    if (!el) return;
+    const publish = () => {
+      document.documentElement.style.setProperty(
+        '--nav-h', `${Math.round(el.getBoundingClientRect().height)}px`
+      );
+    };
+    publish();
+    const ro = new ResizeObserver(publish);
+    ro.observe(el);
+    document.fonts?.ready.then(publish);
+    return () => ro.disconnect();
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setSolid(window.scrollY > 40);
@@ -37,14 +55,20 @@ export default function Nav() {
   return (
     <>
       <div className="announce">
-        <span>{wedding.dateLong}</span>
-        <span className="announce__dot" aria-hidden="true">·</span>
-        <span>{wedding.venueShort}</span>
-        <span className="announce__dot" aria-hidden="true">·</span>
-        <span>{wedding.cityState}</span>
+        <p className="announce__info">
+          <span>{wedding.dateLong}</span>
+          <span className="announce__dot" aria-hidden="true">·</span>
+          <span>{wedding.venueShort}</span>
+          <span className="announce__dot announce__dot--wide" aria-hidden="true">·</span>
+          <span className="announce__city">{wedding.cityState}</span>
+        </p>
+        <Link to="/rsvp" className="announce__rsvp">RSVP</Link>
       </div>
 
-      <header className={`nav ${solid ? 'is-solid' : ''} ${overDark ? 'nav--over' : ''} ${open ? 'is-menu' : ''}`}>
+      <header
+        ref={navRef}
+        className={`nav ${solid ? 'is-solid' : ''} ${overDark ? 'nav--over' : ''} ${open ? 'is-menu' : ''}`}
+      >
         <div className="nav__inner">
           <button
             className={`burger ${open ? 'is-open' : ''}`}
@@ -64,8 +88,6 @@ export default function Nav() {
           </nav>
 
           <Link to="/" className="nav__mark" aria-label="Home">{couple.monogram}</Link>
-
-          <Link to="/rsvp" className="nav__rsvp">RSVP</Link>
         </div>
       </header>
 
