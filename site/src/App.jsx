@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import CursorDrift from './components/CursorDrift';
 
 import Home from './pages/Home';
 import Story from './pages/Story';
@@ -16,6 +17,7 @@ export default function App() {
     <>
       <a className="skip" href="#main">Skip to content</a>
       <ScrollToTop />
+      <CursorDrift />
       <Nav />
       <main id="main">
         <Routes>

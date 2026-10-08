@@ -73,7 +73,7 @@ function Chapter({ chapter, index }) {
               <Reveal as="p" className="body" key={i} delay={i * 90}>{p}</Reveal>
             ))}
           </div>
-          <div className="chap__wide-imgs">
+          <div className={`chap__wide-imgs ${photos.length === 1 ? 'chap__wide-imgs--single' : ''}`}>
             {photos.map((p, i) => (
               <Reveal className="frame frame--wide" variant="img" key={p} delay={i * 130}>
                 <img src={`/photos/${p}`} alt={`${couple.her} and ${couple.him} — ${title}`} loading="lazy" />

@@ -809,6 +809,7 @@ h1, h2, h3, h4 {
   margin-top: clamp(3rem, 7vw, 5rem);
 }
 @media (max-width: 700px) { .chap__wide-imgs { grid-template-columns: 1fr; } }
+.chap__wide-imgs--single { grid-template-columns: 1fr; max-width: 980px; margin-inline: auto; }
 
 /* =========================================================
    LOCATION
@@ -1181,4 +1182,31 @@ textarea.input { resize: vertical; line-height: 1.6; }
   }
   .castle__sky { opacity: 1; transform: translateX(-50%) scale(1); transition: none; }
   .castle__ground { transform: scaleX(1); transition: none; }
+}
+
+/* =========================================================
+   CURSOR DRIFT
+   Photos shift a few pixels against the cursor, like looking
+   through a window; the small overlapping story photos float
+   the other way, so the two layers read as separate depths.
+   --mx / --my come from components/CursorDrift.jsx and only
+   exist on mouse/trackpad devices without reduced motion.
+   ========================================================= */
+.has-drift .frame img,
+.has-drift .plx img,
+.has-drift .hero__media img,
+.has-drift .banner__media img {
+  --dx: 10px; --dy: 7px;
+  translate: calc(var(--mx, 0) * var(--dx) * -1) calc(var(--my, 0) * var(--dy) * -1);
+}
+/* a little extra size so the edges never peek through while drifting */
+.has-drift .frame img { scale: 1.06; }
+.has-drift .hero__media img,
+.has-drift .banner__media img { --dx: 16px; --dy: 10px; scale: 1.04; }
+/* scroll parallax already uses most of the vertical slack in these */
+.has-drift .plx img { --dy: 4px; }
+.has-drift .story-hero__bg img { --dx: 16px; }
+
+.has-drift .chap__img--b {
+  translate: calc(var(--mx, 0) * 9px) calc(var(--my, 0) * 6px);
 }

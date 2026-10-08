@@ -137,14 +137,14 @@ export const story = {
       body: [
         'Baby Evelyn now has a big room at our home in Maple Valley.',
       ],
-      photos: ['evelyn-1.jpg', 'p152.jpg'],
+      photos: ['evelyn-1.jpg', 'house.jpg'],
       layout: 'right',
     },
     {
       kicker: 'Which brings us here',
       title: 'Now we’re excited to celebrate with you all in a castle!',
       body: [],
-      photos: ['p159.jpg', 'p150.jpg'],
+      photos: ['p150.jpg'],
       layout: 'wide',
     },
   ],
