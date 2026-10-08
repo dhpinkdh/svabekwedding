@@ -124,18 +124,18 @@ export const story = {
     },
     {
       year: '2025',
-      title: 'A new job, a move, a new person',
+      title: 'A new job and a move',
       body: [
-        'Michael started at Nintendo. We moved to Kirkland. Evelyn arrived. These three things happened close enough together that we still cannot quite put them in order.',
+        'Michael got his dream job at Nintendo, so we moved up to Kirkland.',
       ],
       photos: ['p114.jpg', 'p11.jpg'],
       layout: 'left',
     },
     {
       year: '2026',
-      title: 'We bought a house',
+      title: 'A baby and a house',
       body: [
-        'A real one, with a yard and a mortgage and a list of things to fix.',
+        'Baby Evelyn now has a big room at our home in Maple Valley.',
       ],
       photos: ['p149.jpg', 'p152.jpg'],
       layout: 'right',
