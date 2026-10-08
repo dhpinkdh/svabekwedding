@@ -119,7 +119,7 @@ export const story = {
         'The ring, it turns out, had been sitting in Michael’s peacoat pocket for a while. He proposed to Tennessee Whiskey — the T-Pain version.',
         'If you know, you know. If you don’t, ask us at the reception and we will happily play it for you.',
       ],
-      photos: ['p156.jpg', 'p179.jpg'],
+      photos: ['p156.jpg', 'proposal-2.jpg'],
       layout: 'right',
     },
     {
