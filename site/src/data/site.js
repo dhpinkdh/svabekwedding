@@ -216,7 +216,7 @@ export const travelNotes = [
 /* ---------- REGISTRY ---------- */
 export const registry = {
   note:
-    'Truly, the only thing we want is you in the room. We have a house and, at this point, most of the things that go in it. But several of you have asked, so here is where to look.',
+    'Truly, the only thing we want is you in the room. But several of you have asked, so here is where to look.',
   // Any entry with an empty link is hidden automatically.
   // The Amazon registry now lives as the first card in "The fund" below,
   // so this list is empty and the section is hidden.
