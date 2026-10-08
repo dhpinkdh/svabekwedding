@@ -234,10 +234,10 @@ const JOY_FUND = 'https://withjoy.com/svabeks/registry?pid=cdbbbb7f-a0b7-41b7-88
    Delete any fund you don't want — the layout adjusts on its own.
 ------------------------------------------------ */
 export const funds = {
-  eyebrow: 'Something else entirely',
-  title: 'The fund',
+  eyebrow: 'Two ways to give',
+  title: 'Gifts',
   note:
-    'We did most of the last two and a half years in a hurry — a move, a job, a baby, a house, all of it at once. There are a few things we skipped along the way. If you would rather put something toward one of those than send us a serving dish, this is where it goes.',
+    'We did most of the last two and a half years in a hurry — a move, a job, a baby, a house, all of it at once. If you would like to send something, our registry has the practical things, and the fund goes toward the few we skipped along the way.',
   items: [
     {
       name: 'Our Amazon registry',
