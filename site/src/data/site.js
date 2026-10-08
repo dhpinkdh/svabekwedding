@@ -109,7 +109,7 @@ export const story = {
       body: [
         'Evelyn was conceived shortly thereafter. We are efficient people.',
       ],
-      photos: ['p163.jpg', 'p160.jpg'],
+      photos: ['kids-1.jpg', 'kids-2.jpg'],
       layout: 'left',
     },
     {
