@@ -216,7 +216,7 @@ export const travelNotes = [
 /* ---------- REGISTRY ---------- */
 export const registry = {
   note:
-    'Truly, the only thing we want is you in the room. But several of you have asked, so here is where to look.',
+    'Truly, the only thing we want is you in the room.',
   // Any entry with an empty link is hidden automatically.
   // The Amazon registry now lives as the first card in "The fund" below,
   // so this list is empty and the section is hidden.
@@ -235,18 +235,18 @@ const JOY_FUND = 'https://withjoy.com/svabeks/registry?pid=cdbbbb7f-a0b7-41b7-88
 ------------------------------------------------ */
 export const funds = {
   eyebrow: 'Two ways to give',
-  title: 'Gifts',
+  title: 'Registry or Fund',
   note:
     'We did most of the last two and a half years in a hurry — a move, a job, a baby, a house, all of it at once. If you would like to send something, our registry has the practical things, and the fund goes toward the few we skipped along the way.',
   items: [
     {
-      name: 'Our Amazon registry',
+      name: 'Gift registry',
       desc: 'The practical list — the things we actually need, all in one place.',
       url: 'https://www.amazon.com/wedding/share/svabekwedding',
       cta: 'View registry',
     },
     {
-      name: 'The fund',
+      name: 'Donation fund',
       desc: 'Toward the honeymoon we never took, the house and its long list, and Evelyn.',
       url: JOY_FUND,
     },
