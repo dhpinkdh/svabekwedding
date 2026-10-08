@@ -137,7 +137,7 @@ export const story = {
       body: [
         'Baby Evelyn now has a big room at our home in Maple Valley.',
       ],
-      photos: ['p149.jpg', 'p152.jpg'],
+      photos: ['evelyn-1.jpg', 'p152.jpg'],
       layout: 'right',
     },
     {
