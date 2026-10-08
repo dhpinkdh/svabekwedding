@@ -100,7 +100,7 @@ export const story = {
       body: [
         'After moving in together, we drove east so Sara could meet Michael’s family, his friends, and his hometown — and learn exactly how seriously Penn State takes a tailgate.',
       ],
-      photos: ['p119.jpg', 'p129.jpg'],
+      photos: ['penn-state.gif', 'penn-state-1.jpg'],
       layout: 'right',
     },
     {
