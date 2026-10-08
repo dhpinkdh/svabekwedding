@@ -91,7 +91,7 @@ export const story = {
         'A routine procedure went badly wrong, and what should have been a small thing turned into a stint in the hospital.',
         'Michael met Sara’s family right after, then spent the next couple of weeks helping her recover.',
       ],
-      photos: ['p133.jpg', 'p135.jpg'],
+      photos: ['hospital-1.jpg', 'hospital-2.jpg'],
       layout: 'left',
     },
     {
