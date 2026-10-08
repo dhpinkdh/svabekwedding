@@ -128,7 +128,7 @@ export const story = {
       body: [
         'Michael got his dream job at Nintendo, so we moved up to Kirkland.',
       ],
-      photos: ['p114.jpg', 'p11.jpg'],
+      photos: ['move-1.jpg', 'move-2.jpg'],
       layout: 'left',
     },
     {
