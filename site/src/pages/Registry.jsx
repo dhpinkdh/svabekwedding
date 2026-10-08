@@ -74,7 +74,7 @@ export default function Registry() {
       {/* ---------- Sign off ---------- */}
       <section className="section wrap wrap--narrow">
         <Reveal className="reg__photo frame frame--pano" variant="img">
-          <img src="/photos/p135.jpg" alt="Sara and Michael holding each other" loading="lazy" />
+          <img src="/photos/family.jpg" alt="Sara and Michael holding Evelyn in a field" loading="lazy" style={{ objectPosition: 'center 30%' }} />
         </Reveal>
 
         <Reveal className="reg__end center" delay={160}>
