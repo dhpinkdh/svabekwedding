@@ -218,10 +218,9 @@ export const registry = {
   note:
     'Truly, the only thing we want is you in the room. We have a house and, at this point, most of the things that go in it. But several of you have asked, so here is where to look.',
   // Any entry with an empty link is hidden automatically.
-  links: [
-    { name: 'Our Registry on Amazon', desc: 'The full wish list.', url: 'https://www.amazon.com/wedding/share/svabekwedding' },
-    // Add more here if you register anywhere else — empty ones stay hidden.
-  ],
+  // The Amazon registry now lives as the first card in "The fund" below,
+  // so this list is empty and the section is hidden.
+  links: [],
 };
 
 /* The deep link that opens the cash-fund contribution box directly.
@@ -239,26 +238,21 @@ export const funds = {
   title: 'The fund',
   note:
     'We did most of the last two and a half years in a hurry — a move, a job, a baby, a house, all of it at once. There are a few things we skipped along the way. If you would rather put something toward one of those than send us a serving dish, this is where it goes.',
-  // TODO Sara: paste the link to each fund from your Joy registry.
   items: [
     {
-      name: 'The honeymoon we never took',
-      desc: 'We went straight from engaged to parents without stopping. We would like to stop.',
-      url: JOY_FUND,
+      name: 'Our Amazon registry',
+      desc: 'The practical list — the things we actually need, all in one place.',
+      url: 'https://www.amazon.com/wedding/share/svabekwedding',
+      cta: 'View registry',
     },
     {
-      name: 'The house',
-      desc: 'It came with a yard, a mortgage, and a list. We are slowly working down the list.',
-      url: JOY_FUND,
-    },
-    {
-      name: 'Evelyn’s fund',
-      desc: 'Something set aside for the small person who made all of this happen faster.',
+      name: 'The fund',
+      desc: 'Toward the honeymoon we never took, the house and its long list, and Evelyn.',
       url: JOY_FUND,
     },
   ],
   footnote:
-    'All three lead to the same place, so pick whichever you like the sound of — we’ll know what you meant. Giving through Venmo, PayPal or Cash App costs you nothing extra; card payments add a small processing fee.',
+    'Giving to the fund through Venmo, PayPal or Cash App costs you nothing extra; card payments add a small processing fee.',
 };
 
 /* ---------- FAQ ---------- */

@@ -15,9 +15,9 @@ export default function Registry() {
         lede={registry.note}
       />
 
-      {/* ---------- The registry proper ---------- */}
-      <section className="section wrap wrap--narrow" style={{ paddingTop: 0 }}>
-        {liveLinks.length > 0 ? (
+      {/* ---------- The registry proper (hidden while the list is empty) ---------- */}
+      {liveLinks.length > 0 && (
+        <section className="section wrap wrap--narrow" style={{ paddingTop: 0 }}>
           <div className="reg">
             {liveLinks.map((l, i) => (
               <Reveal key={l.name} delay={i * 110}>
@@ -32,14 +32,8 @@ export default function Registry() {
               </Reveal>
             ))}
           </div>
-        ) : (
-          <Reveal className="center">
-            <p className="body" style={{ marginInline: 'auto' }}>
-              Our registry is being put together and will appear here soon.
-            </p>
-          </Reveal>
-        )}
-      </section>
+        </section>
+      )}
 
       {/* ---------- The fund — deliberately its own thing ---------- */}
       <section className="section fundband">
@@ -60,7 +54,7 @@ export default function Registry() {
                     <h3 className="fund__n">{f.name}</h3>
                     <p className="body body--tight fund__d">{f.desc}</p>
                     <a className="btn btn--light fund__btn" href={f.url} target="_blank" rel="noreferrer">
-                      Contribute
+                      {f.cta || 'Contribute'}
                     </a>
                   </Reveal>
                 ))}
