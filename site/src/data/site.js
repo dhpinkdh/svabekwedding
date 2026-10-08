@@ -141,9 +141,13 @@ export const story = {
       layout: 'right',
     },
     {
+      year: '2027',
       kicker: 'Which brings us here',
-      title: 'Now we’re excited to celebrate with you all in a castle!',
-      body: [],
+      title: 'Now we’d like everyone in one room',
+      body: [
+        'We have done a lot of this quietly, and mostly in a hurry. This is the part we want to do slowly, and with all of you in it.',
+        'Let’s celebrate everything these past two and a half years have brought. We hope you’ll join us on our crazy little speedrun.',
+      ],
       photos: ['p150.jpg'],
       layout: 'wide',
     },
