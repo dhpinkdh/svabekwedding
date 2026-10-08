@@ -217,13 +217,10 @@ export const travelNotes = [
 export const registry = {
   note:
     'Truly, the only thing we want is you in the room. We have a house and, at this point, most of the things that go in it. But several of you have asked, so here is where to look.',
-  // TODO Sara: paste your Joy registry link here once it's set up.
-  // Any entry with an empty link is hidden automatically, so you can
-  // fill these in one at a time.
+  // Any entry with an empty link is hidden automatically.
   links: [
-    { name: 'Our Registry on Joy', desc: 'The full wish list.', url: 'https://withjoy.com/svabeks/registry' },
+    { name: 'Our Registry on Amazon', desc: 'The full wish list.', url: 'https://www.amazon.com/wedding/share/svabekwedding' },
     // Add more here if you register anywhere else — empty ones stay hidden.
-    { name: 'Amazon', desc: 'The practical list.', url: '' },
   ],
 };
 
