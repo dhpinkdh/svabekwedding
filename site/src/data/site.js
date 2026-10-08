@@ -81,7 +81,7 @@ export const story = {
       body: [
         'We were neighbors who met on Hinge. The night ended with a downpour and a kiss.',
       ],
-      photos: ['p188.jpg', 'p187.jpg'],
+      photos: ['first-date-1.jpg', 'first-date-2.jpg'],
       layout: 'right',
     },
     {
