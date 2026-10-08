@@ -107,7 +107,7 @@ export const story = {
       kicker: '1 year in',
       title: 'We knew we wanted kids',
       body: [
-        'Evelyn was conceived shortly thereafter. We are efficient people.',
+        'We started planning and succeeded in execution immediately. We were expecting!',
       ],
       photos: ['kids-1.jpg', 'kids-2.jpg'],
       layout: 'left',
