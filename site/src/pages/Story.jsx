@@ -65,7 +65,7 @@ function Chapter({ chapter, index }) {
         <div className="wrap">
           <Reveal className="chap__head center">
             {year && <span className="chap__year">{year}</span>}
-            <p className="eyebrow eyebrow--wine">{kicker}</p>
+            {kicker && <p className="eyebrow eyebrow--wine">{kicker}</p>}
             <h2 className="h2 chap__title">{title}</h2>
           </Reveal>
           <div className="chap__copy chap__copy--center">
@@ -94,7 +94,7 @@ function Chapter({ chapter, index }) {
           <Reveal>
             <span className="chap__num" aria-hidden="true">{num}</span>
             {year && <span className="chap__year">{year}</span>}
-            <p className="eyebrow eyebrow--wine chap__kicker">{kicker}</p>
+            {kicker && <p className="eyebrow eyebrow--wine chap__kicker">{kicker}</p>}
             <h2 className="h2 chap__title">{title}</h2>
           </Reveal>
           <div className="chap__copy">
